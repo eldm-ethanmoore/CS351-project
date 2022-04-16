@@ -4,7 +4,7 @@ CS351 database project.
 
 ## Start Backend
 
-1. Install PhpMyAdmin
+1. Install XAMPP
 2. Start Apache and MySQL
 3. http://localhost/phpmyadmin
 4. Import CFG.sql into phpmyadmin
