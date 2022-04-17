@@ -13,7 +13,7 @@ CS351 database project.
 ## Start FrontEnd
 
 ```
-yarn install
+yarn
 yarn start
 ```
 
