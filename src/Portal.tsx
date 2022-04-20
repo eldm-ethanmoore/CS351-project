@@ -25,13 +25,16 @@ const Portal = () => {
       <>
         <h1 className="titleText">Portal Dashboard</h1>
         <form onSubmit={handleSubmit}>
-        <label>Enter your username:
+        <label>Enter your username: 
           <input 
             type="text" 
             value={name}
             onChange={(e) => setUserName(e.target.value)}
           />
         </label>
+
+        <br></br>
+        
         <label>Enter your password:
           <input 
             type="text" 
@@ -39,6 +42,9 @@ const Portal = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
+        
+        <br></br>
+
         <input type="submit" />
         </form>
       </>
@@ -48,20 +54,42 @@ const Portal = () => {
   const RenderUserDash = () => {
     return(
       <>
-        <h1 className="name" >Hey {repData[0].FirstName}</h1>
+        {/* <h1 className="name" >Hey {repData[0].FirstName}</h1> */}
+
+        <h1 className="name" >Hey {name} </h1>
         <h1 className="name" >{loggedIn}</h1>
+
+
         <button>Generate Report</button>
+        <br></br>
+
+
         <button>Add Rep</button>
+
+        <br></br>
+
+
         <button>Update Customer Credit Limit</button>
+
+        <br></br>
+
+
         <button>Exit</button>
+
+        <br></br>
+
+        
+
       </>
     );
   }
+
 
   return(
     <>
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
+
     </>
   );
 }
