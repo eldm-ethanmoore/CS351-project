@@ -141,7 +141,7 @@ import axios from 'axios';
 
   return(
     <>
-      <h1 className="titleText">Portal Dashboard</h1>
+      <h1 className="titleText">Add Representative</h1>
       <CreateRep/>
     </>
   );
