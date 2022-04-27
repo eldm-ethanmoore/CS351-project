@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
+import AddRep from './AddRep';
 
 const Portal = () => {
   
@@ -7,6 +8,7 @@ const Portal = () => {
   const [password, setPassword] = useState("90085");
   const [loggedIn, setLoggedIn] = useState(false);
   const [repData, setRepData] = useState([{FirstName: ""}]);  
+  const [subDash, setSubDash] = useState(0);
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -51,30 +53,35 @@ const Portal = () => {
     );
   }
 
+  useEffect(() => {
+    console.log(name)
+    console.log(password)
+    console.log("sub dash num: "+subDash)
+  }, [name, password, subDash])
+
   const RenderUserDash = () => {
     return(
       <>
-        {/* <h1 className="name" >Hey {repData[0].FirstName}</h1> */}
 
         <h1 className="name" >Hey {name} </h1>
         <h1 className="name" >{loggedIn}</h1>
 
 
-        <button>Generate Report</button>
+        <button onClick={() => setSubDash(1)}>Generate Report</button>
         <br></br>
 
 
-        <button>Add Rep</button>
-
-        <br></br>
-
-
-        <button>Update Customer Credit Limit</button>
+        <button onClick={() => setSubDash(2)}>Add Rep</button>
 
         <br></br>
 
 
-        <button>Exit</button>
+        <button onClick={() => setSubDash(3)}>Update Customer Credit Limit</button>
+
+        <br></br>
+
+
+        <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);}}>Exit</button>
 
         <br></br>
 
@@ -89,7 +96,7 @@ const Portal = () => {
     <>
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
-
+      {loggedIn && subDash === 2 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
   );
 }
