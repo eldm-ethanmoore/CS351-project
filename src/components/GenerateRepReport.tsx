@@ -14,6 +14,13 @@ interface repProps {
 
 const GenerateRepReport = ({username, password, changeSubDash}:repProps) => {
 
+  const [repReport, setRepReport] = useState([{}]);
+  const [gotData, setGotData] = useState(false);
+  
+  const displayData = () => {
+    console.log(repReport)
+  }
+
   const getRepData = () => {
     axios.post('http://localhost/repReport.php', 
     'user='+username+'&pass='+password
@@ -21,15 +28,17 @@ const GenerateRepReport = ({username, password, changeSubDash}:repProps) => {
       console.log(response.data);
       if(response.data.length > 0)
       {
-        //setRepData(response.data);
-        changeSubDash()
+        setGotData(true);
+        setRepReport(response.data);
+        //changeSubDash()
       }
     });
   }
 
   return(
     <>
-      {getRepData()}
+      {!gotData && getRepData()}
+      {gotData && displayData()}
     </>
   );
 }
