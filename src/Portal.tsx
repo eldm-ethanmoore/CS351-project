@@ -41,7 +41,7 @@ const Portal = () => {
         
         <label>Enter your password:
           <input 
-            type="text" 
+            type="password" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -86,7 +86,7 @@ const Portal = () => {
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
       {loggedIn && repData !== null && subDash === 1 && <GenerateRepReport username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
-      {loggedIn && repData !== null && subDash === 2 && <UpdateLim/>}
+      {loggedIn && repData !== null && subDash === 2 && <UpdateLim changeSubDash={() => setSubDash(0)}/>}
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
   );

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 
  interface repProps{
@@ -8,16 +8,17 @@ import axios from 'axios';
  }
 
  const AddRep = ({username, password, changeSubDash}:repProps) => {
+  
 
   const [repnum, setRepNum] = useState("75")
   const [lastname, setLastName] = useState("Moore")
   const [firstname, setFirstName] = useState("Ethan")
-  const [street, setStreet] = useState("Test Street 123")
+  const [street, setStreet] = useState("123 Street")
   const [city, setCity] = useState("Bowling Green")
   const [state, setState] = useState("KY")
   const [postalcode, setPostalCode] = useState("42104")
-  const [commision, setCommision] = useState(30000.50)
-  const [rate, setRate] = useState(0.07)
+  const [commision, setCommision] = useState("30000.50")
+  const [rate, setRate] = useState("0.07")
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -33,21 +34,16 @@ import axios from 'axios';
     });
   }
 
-  useEffect(() => {
-    console.log(username)
-    console.log(password)
-  }, [username, password])
-
-  const CreateRep = () => {
-    return(
-      <>
+  return(
+    <>
+      <h1 className="titleText">Add Representative</h1>
         <form onSubmit={handleSubmit}>
 
         <label>Enter your RepNum: 
           <input 
             type="text" 
-            value={"75"}
-            onChange={(e) => setRepNum(e.target.value)}
+            value={repnum}
+            onChange={e => setRepNum(e.target.value)}
           />
         </label>
 
@@ -56,7 +52,7 @@ import axios from 'axios';
         <label>Enter your FirstName: 
           <input 
             type="text" 
-            value={"Ethan"}
+            value={firstname}
             onChange={(e) => setFirstName(e.target.value)}
           />
         </label>
@@ -66,7 +62,7 @@ import axios from 'axios';
         <label>Enter your LastName:
           <input 
             type="text" 
-            value={"Moore"}
+            value={lastname}
             onChange={(e) => setLastName(e.target.value)}
           />
         </label>
@@ -76,7 +72,7 @@ import axios from 'axios';
         <label>Enter your Street:
           <input 
             type="text" 
-            value={"Test Street 123"}
+            value={street}
             onChange={(e) => setStreet(e.target.value)}
           />
         </label>
@@ -86,7 +82,7 @@ import axios from 'axios';
         <label>Enter your City:
           <input 
             type="text" 
-            value={"Bowling Green"}
+            value={city}
             onChange={(e) => setCity(e.target.value)}
           />
         </label>       
@@ -96,7 +92,7 @@ import axios from 'axios';
         <label>Enter your State:
           <input 
             type="text" 
-            value={"KY"}
+            value={state}
             onChange={(e) => setState(e.target.value)}
           />
         </label>       
@@ -106,7 +102,7 @@ import axios from 'axios';
         <label>Enter your Postal Code:
           <input 
             type="text" 
-            value={"42104"}
+            value={postalcode}
             onChange={(e) => setPostalCode(e.target.value)}
           />
         </label>       
@@ -116,8 +112,8 @@ import axios from 'axios';
         <label>Enter your Commision:
           <input 
             type="text" 
-            value={30000.50}
-            onChange={(e) => setCommision(Number(e.target.value))}
+            value={commision}
+            onChange={(e) => Number(setCommision(e.target.value))}
           />
         </label>
 
@@ -126,8 +122,8 @@ import axios from 'axios';
         <label>Enter your Rate:
           <input 
             type="text" 
-            value={0.07}
-            onChange={(e) => setRate(Number(e.target.value))}
+            value={rate}
+            onChange={(e) => Number(setRate(e.target.value))}
           />
         </label>
 
@@ -135,14 +131,6 @@ import axios from 'axios';
 
         <input type="submit" />
         </form>
-      </>
-    );
-  }
-
-  return(
-    <>
-      <h1 className="titleText">Add Representative</h1>
-      <CreateRep/>
     </>
   );
  }
