@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import AddRep from './components/AddRep';
 import UpdateLim from './components/UpdateLim';
-import GenerateReport from './components/GenerateReport';
+import GenerateRepReport from './components/GenerateRepReport';
 const Portal = () => {
   
   const [name, setUserName] = useState("Megan");
@@ -64,11 +64,13 @@ const Portal = () => {
         <h1 className="name" >{loggedIn}</h1>
 
 
-        <button onClick={() => setSubDash(1)}>Generate Report</button>
+        <button onClick={() => setSubDash(1)}>Generate Representative Report</button>
         <br></br>
         <button onClick = {() => setSubDash(2)}>Update Customer Credit Limit</button>
         <br></br>
         <button onClick={() => setSubDash(3)}>Add Rep</button>
+        <br></br>
+        <button onClick={() => setSubDash(4)}>Generate General Report</button>
         <br></br>
         <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);}}>Exit</button>
       </>
@@ -82,7 +84,7 @@ const Portal = () => {
     <>
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
-      {loggedIn && repData !== null && subDash === 1 && <GenerateReport/>}
+      {loggedIn && repData !== null && subDash === 1 && <GenerateRepReport/>}
       {loggedIn && repData !== null && subDash === 2 && <UpdateLim/> }
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
