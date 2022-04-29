@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 /*	
 
@@ -14,31 +14,45 @@ interface repProps {
 
 const GenerateRepReport = ({username, password, changeSubDash}:repProps) => {
 
-  const [repReport, setRepReport] = useState([{}]);
+  const [repReport, setRepReport] = useState([])
   const [gotData, setGotData] = useState(false);
   
-  const displayData = () => {
-    console.log(repReport)
+  const RepBlock = (repProp: any) => {
+    console.log(repProp)
+    return(
+      <>
+        <h2>{repProp.FirstName+" "+repProp.LastName+" #"+repProp.RepNum}</h2>
+        <ul>
+          <li>Total Balance: {repProp.Balance}</li>
+          <li>Number Of Customers: {repProp.NumOfCustomers}</li>
+        </ul>
+      </>
+    );
   }
 
-  const getRepData = () => {
+  useEffect(() => {
+
     axios.post('http://localhost/repReport.php', 
     'user='+username+'&pass='+password
     ).then((response)=>{
-      console.log(response.data);
       if(response.data.length > 0)
       {
-        setGotData(true);
         setRepReport(response.data);
+        console.log(gotData)
+        console.log(response.data)
         //changeSubDash()
-      }
-    });
-  }
+      }});
+  }, [gotData])
+
 
   return(
     <>
-      {!gotData && getRepData()}
-      {gotData && displayData()}
+       <br></br>
+       <br></br>
+        <button onClick={() => {setGotData(true);console.log(repReport.length)}}>Display Representative Results</button>
+       <div style={{'color': 'white'}}>
+        {gotData && repReport.map((item) => RepBlock(item))}
+       </div>
     </>
   );
 }

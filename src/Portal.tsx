@@ -65,7 +65,7 @@ const Portal = () => {
         <h1 className="name" >{loggedIn}</h1>
 
 
-        <button onClick={() => setSubDash(1)}>Generate Representative Report</button>
+        <button onClick={() => {setSubDash(1);console.log("THis works")}}>Generate Representative Report</button>
         <br></br>
         <button onClick = {() => setSubDash(2)}>Update Customer Credit Limit</button>
         <br></br>
