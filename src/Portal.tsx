@@ -49,7 +49,8 @@ const Portal = () => {
         
         <br></br>
 
-        <input type="submit" />
+        <input type="submit"
+        value = "Login" />
         </form>
       </>
     );
@@ -72,7 +73,7 @@ const Portal = () => {
         <br></br>
         <button onClick={() => setSubDash(4)}>Generate General Report</button>
         <br></br>
-        <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);}}>Exit</button>
+        <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);setSubDash(0);}}>Exit</button>
       </>
     );
   }
@@ -85,7 +86,7 @@ const Portal = () => {
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
       {loggedIn && repData !== null && subDash === 1 && <GenerateRepReport username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
-      {loggedIn && repData !== null && subDash === 2 && <UpdateLim/> }
+      {loggedIn && repData !== null && subDash === 2 && <UpdateLim username={name} password={password} changeSubDash={() => setSubDash(0)}/> }
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
   );
