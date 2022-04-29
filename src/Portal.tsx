@@ -86,7 +86,7 @@ const Portal = () => {
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
       {loggedIn && repData !== null && subDash === 1 && <GenerateRepReport username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
-      {loggedIn && repData !== null && subDash === 2 && <UpdateLim username={name} password={password} changeSubDash={() => setSubDash(0)}/> }
+      {loggedIn && repData !== null && subDash === 2 && <UpdateLim/>}
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
   );
