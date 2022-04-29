@@ -18,10 +18,6 @@
 
     $res = mysqli_query($conn,"UPDATE customer SET CreditLimit = '$lim' WHERE CustomerNum = $coustNum AND CustomerName = '$coust'");
 
-    if($con->query($sql) == TRUE) {
-        echo "Successful limit update"
-    } else {
-        echo "Something went wrong"
-    }
+    print json_encode($res); 
 
 ?>
