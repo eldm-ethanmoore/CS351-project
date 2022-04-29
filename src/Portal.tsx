@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import AddRep from './components/AddRep';
 import UpdateLim from './components/UpdateLim';
-
+import GenerateReport from './components/GenerateReport';
 const Portal = () => {
   
   const [name, setUserName] = useState("Megan");
@@ -82,7 +82,7 @@ const Portal = () => {
     <>
       {!loggedIn && RenderDash()}
       {loggedIn && repData !== null && <RenderUserDash/>}
-      {loggedIn && repData !== null && subDash === 1 }
+      {loggedIn && repData !== null && subDash === 1 && <GenerateReport/>}
       {loggedIn && repData !== null && subDash === 2 && <UpdateLim/> }
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
