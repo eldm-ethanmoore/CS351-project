@@ -16,7 +16,7 @@
     $lim = $_POST["limit"];
     $coustNum = $_POST["coustNum"];
 
-    $res = mysqli_query($conn,"UPDATE Coustomer SET CreditLimit = '$lim' WHERE CustomerNum = $coustNum AND CustomerName = '$coust'");
+    $res = mysqli_query($conn,"UPDATE customer SET CreditLimit = '$lim' WHERE CustomerNum = $coustNum AND CustomerName = '$coust'");
     print json_encode($res);
 
 
