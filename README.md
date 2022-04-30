@@ -8,7 +8,7 @@ CS351 database project.
 2. Start Apache and MySQL
 3. http://localhost/phpmyadmin
 4. Import CFG.sql into phpmyadmin
-5. Move php/loginPortal.php and repReport.php into C:/xampp/htdocs/
+5. Move all PHP files in the php folder into C:/xampp/htdocs/
 
 ## Start FrontEnd
 
