@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import "../css/Portal.css"
+
 /*	
 
   For Each Representative	Generate Report 
@@ -47,12 +49,12 @@ const GenerateRepReport = ({username, password, changeSubDash}:repProps) => {
 
   return(
     <>
-       <br></br>
-       <br></br>
-        <button onClick={() => {setGotData(true);console.log(repReport.length)}}>Display Representative Results</button>
-       <div style={{'color': 'white'}}>
+      <br></br>
+      <br></br>
+      <button className='rd-submit' onClick={() => {setGotData(true);console.log(repReport.length)}}>Display Representative Results</button>
+      <div style={{'color': 'white'}}>
         {gotData && repReport.map((item) => RepBlock(item))}
-       </div>
+      </div>
     </>
   );
 }

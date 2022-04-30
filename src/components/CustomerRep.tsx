@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+import "../css/Portal.css"
+
 /*	
 
   For Each Representative	Generate Report 
@@ -49,14 +51,14 @@ const CustomerRep = ({username, password, changeSubDash}:repProps) => {
         <h1 className="titleText">Customer Search</h1>
           <form onSubmit={ handleSearchSubmit }>
   
-            <label>Which customer would you like to search for?: 
+            <label>Which customer would you like to search for?<br />
             <input 
               type="text" 
-              value={nameInput}
+              placeholder={nameInput}
               onChange={e => setName(e.target.value)}
-            />
+            /><br />
             </label>
-            <input type="submit" />
+            <input className="rd-submit" type="submit" />
             </form>
             <br></br>
             <div style={{'color': 'white'}}>

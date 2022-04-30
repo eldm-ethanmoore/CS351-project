@@ -6,6 +6,8 @@ import UpdateLim from './components/UpdateLim';
 import GenerateRepReport from './components/GenerateRepReport';
 import CustomerRep from './components/CustomerRep';
 
+import './css/Portal.css';
+
 const Portal = () => {
   
   const [name, setUserName] = useState("Megan");
@@ -31,28 +33,31 @@ const Portal = () => {
       <>
         <h1 className="titleText">Portal Dashboard</h1>
         <form onSubmit={handleSubmit}>
-        <label>Enter your username: 
-          <input 
-            type="text" 
-            value={name}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </label>
+          <label>Username<br/>
+            <input 
+              type="text" 
+              value={name}
+              onChange={(e) => setUserName(e.target.value)}
+            />
+          </label><br/>
 
-        <br></br>
-        
-        <label>Enter your password:
-          <input 
-            type="password" 
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        
-        <br></br>
+          <br/>
+          
+          <label>Password<br/>
+            <input 
+              type="password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </label><br/>
+          
+          <br/>
 
-        <input type="submit"
-        value = "Login" />
+          <input 
+            type="submit"
+            value = "Login"
+            className="rd-submit"
+          />
         </form>
       </>
     );
@@ -62,19 +67,19 @@ const Portal = () => {
     return(
       <>
 
-        <h1 className="name" >Hey {name} </h1>
+        <h1 className="name" >Hello {name}. </h1>
         <h1 className="name" >{loggedIn}</h1>
 
-
-        <button onClick={() => {setSubDash(1);console.log("THis works")}}>Generate Representative Report</button>
-        <br></br>
-        <button onClick = {() => setSubDash(2)}>Update Customer Credit Limit</button>
-        <br></br>
-        <button onClick={() => setSubDash(3)}>Add Rep</button>
-        <br></br>
-        <button onClick={() => setSubDash(5)}>Generate Total Quoted Price Report</button>
-        <br></br>
-        <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);setSubDash(0);}}>Exit</button>
+        <button className="rd-submit" onClick={() => {setSubDash(1);console.log("THis works")}}>Generate Representative Report</button>
+        <br/>
+        <button className="rd-submit" onClick = {() => setSubDash(2)}>Update Customer Credit Limit</button>
+        <br/>
+        <button className="rd-submit" onClick={() => setSubDash(3)}>Add Rep</button>
+        <br/>
+        <button className="rd-submit" onClick={() => setSubDash(5)}>Generate Total Quoted Price Report</button>
+        <br/>
+        <button className="rd-submit" onClick={() => {setPassword("");setUserName("");setLoggedIn(false);setSubDash(0);}}>Exit</button>
+        <hr/>
       </>
     );
   }
