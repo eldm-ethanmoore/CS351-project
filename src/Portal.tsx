@@ -3,6 +3,7 @@ import axios from "axios";
 import AddRep from './components/AddRep';
 import UpdateLim from './components/UpdateLim';
 import GenerateRepReport from './components/GenerateRepReport';
+import CustomerRep from './components/CustomerRep';
 const Portal = () => {
   
   const [name, setUserName] = useState("Megan");
@@ -73,6 +74,8 @@ const Portal = () => {
         <br></br>
         <button onClick={() => setSubDash(4)}>Generate General Report</button>
         <br></br>
+        <button onClick={() => setSubDash(5)}>Generate Total Quoted Price Report</button>
+        <br></br>
         <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);setSubDash(0);}}>Exit</button>
       </>
     );
@@ -88,6 +91,7 @@ const Portal = () => {
       {loggedIn && repData !== null && subDash === 1 && <GenerateRepReport username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
       {loggedIn && repData !== null && subDash === 2 && <UpdateLim changeSubDash={() => setSubDash(0)}/>}
       {loggedIn && repData !== null && subDash === 3 && <AddRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
+      {loggedIn && repData !== null && subDash === 5 && <CustomerRep username={name} password={password} changeSubDash={() => setSubDash(0)}/>}
     </>
   );
 }
