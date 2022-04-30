@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
+
 /*	
 
   For Each Representative	Generate Report 
@@ -61,8 +62,8 @@ const CustomerRep = ({username, password, changeSubDash}:repProps) => {
             <div style={{'color': 'white'}}>
                 {gotData && givePriceReport(repData)}
             </div>
-   </>
+      </>
     );
-   }
+  }
 
 export default CustomerRep;

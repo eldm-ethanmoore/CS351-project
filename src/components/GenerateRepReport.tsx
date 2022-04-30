@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+
 /*	
 
   For Each Representative	Generate Report 
@@ -43,7 +44,6 @@ const GenerateRepReport = ({username, password, changeSubDash}:repProps) => {
         //changeSubDash()
       }});
   }, [gotData])
-
 
   return(
     <>

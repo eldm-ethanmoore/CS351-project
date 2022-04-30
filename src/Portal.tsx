@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from "react";
+import { useState } from "react";
+
 import axios from "axios";
 import AddRep from './components/AddRep';
 import UpdateLim from './components/UpdateLim';
 import GenerateRepReport from './components/GenerateRepReport';
 import CustomerRep from './components/CustomerRep';
+
 const Portal = () => {
   
   const [name, setUserName] = useState("Megan");
@@ -12,7 +14,6 @@ const Portal = () => {
   const [repData, setRepData] = useState([{FirstName: ""}]);  
   const [subDash, setSubDash] = useState(0);
   
-
   const handleSubmit = (event: any) => {
     event.preventDefault();
     axios.post('http://localhost/loginPortal.php', 'user='+name+'&pass='+password).then((response)=>{
@@ -57,7 +58,6 @@ const Portal = () => {
     );
   }
 
-
   const RenderUserDash = () => {    
     return(
       <>
@@ -79,9 +79,6 @@ const Portal = () => {
     );
   }
 
-
-
-
   return(
     <>
       {!loggedIn && RenderDash()}
@@ -93,4 +90,5 @@ const Portal = () => {
     </>
   );
 }
+
 export default Portal;

@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
- interface repProps{
+interface repProps {
   username: string;
   password: string;
   changeSubDash: () => void;
- }
+}
 
- const AddRep = ({username, password, changeSubDash}:repProps) => {
+const AddRep = ({username, password, changeSubDash}:repProps) => {
   
-
   const [repnum, setRepNum] = useState("75")
   const [lastname, setLastName] = useState("Moore")
   const [firstname, setFirstName] = useState("Ethan")
@@ -133,5 +132,6 @@ import axios from 'axios';
         </form>
     </>
   );
- }
- export default AddRep;
+}
+
+export default AddRep;
