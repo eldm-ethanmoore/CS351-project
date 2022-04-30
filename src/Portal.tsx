@@ -72,8 +72,6 @@ const Portal = () => {
         <br></br>
         <button onClick={() => setSubDash(3)}>Add Rep</button>
         <br></br>
-        <button onClick={() => setSubDash(4)}>Generate General Report</button>
-        <br></br>
         <button onClick={() => setSubDash(5)}>Generate Total Quoted Price Report</button>
         <br></br>
         <button onClick={() => {setPassword("");setUserName("");setLoggedIn(false);setSubDash(0);}}>Exit</button>
