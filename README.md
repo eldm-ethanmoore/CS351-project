@@ -5,7 +5,6 @@ CS351 database project.
 ## Start Backend
 
 1. Install XAMPP
-2. Install SASS
 3. Start Apache and MySQL
 4. http://localhost/phpmyadmin
 5. Import CFG.sql into phpmyadmin
