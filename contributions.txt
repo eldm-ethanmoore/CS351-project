@@ -1,0 +1,238 @@
+commit c8f2b5baa7376c3d99ad53ddce3eb72f7eeca9fa
+Merge: 8c0cd26 ecf4c3b
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Sat Apr 30 21:11:39 2022 -0500
+
+    Merge branch 'main' of https://github.com/trevorkerney/CS351-project
+
+commit 8c0cd2658a6018f6930b4740ec352863011cbacb
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Sat Apr 30 21:11:34 2022 -0500
+
+    SQL Dump
+
+commit ecf4c3bfd9fb1ea5d54e0899a13a7cce1b0c611e
+Author: Evosity <trevorkerney@hotmail.com>
+Date:   Fri Apr 29 22:57:40 2022 -0400
+
+    simple styling and cleanup
+
+commit 533a7afe28453e74f6618ac328283b8b0402eba7
+Author: Evosity <trevorkerney@hotmail.com>
+Date:   Fri Apr 29 22:01:56 2022 -0400
+
+    cleaning up
+
+commit 4939c5c6491f9d107b8a2c01344e3bf70bc38050
+Author: Evosity <trevorkerney@hotmail.com>
+Date:   Fri Apr 29 21:56:03 2022 -0400
+
+    vanilla css
+
+commit 1fc115449ad3dc4ceb52c516d8fe4f942e148319
+Author: Evosity <trevorkerney@hotmail.com>
+Date:   Fri Apr 29 21:55:32 2022 -0400
+
+    rm sass requirement
+
+commit 539d4cfdc8336b755397aff7a6074bcf29aac2cb
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 20:47:47 2022 -0500
+
+    Update README.md
+
+commit 9c585a3d513e2b3e16dddbe606f3f622123007b2
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 20:28:10 2022 -0500
+
+    Update README.md
+
+commit b5aac35c7dd3bc458cb1e3149a0b71d3a012cb8e
+Author: Step <stevegans42@gmail.com>
+Date:   Fri Apr 29 20:04:05 2022 -0500
+
+    took out extra button
+
+commit fa16c9b5effe08e1bc20f0a9beba10cc9bf76c57
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 19:57:20 2022 -0500
+
+    2/3 Quoted Price Report (portal)
+    
+    Added Total Quoted Price Report to Return, RenderUserDash, imports
+
+commit e6ab65194896c64500f9dfc8c473b848520bacd0
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 19:54:59 2022 -0500
+
+    2/3 Quoted Price Report (tsx)
+
+commit 945c2376df61f532b78021df8ff7c0d1e0255def
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 19:54:14 2022 -0500
+
+    1/3 Customer Total Quoted Price Report (PHP)
+
+commit 7295851acc770d023f8a5c20c24ae462abfe4601
+Author: ZacharyMers <103154324+ZacharyMers@users.noreply.github.com>
+Date:   Fri Apr 29 19:19:29 2022 -0500
+
+    Update README.md
+
+commit 3ce560829f9505eb94b0aa43215c3c2efdc691aa
+Author: Step <stevegans42@gmail.com>
+Date:   Fri Apr 29 17:38:09 2022 -0500
+
+    dix
+
+commit 3b93fe4654d5eaa9cfe5c84095a423304d3254ef
+Author: Step <stevegans42@gmail.com>
+Date:   Fri Apr 29 16:42:14 2022 -0500
+
+    added a suc or fail message
+
+commit f86aa8ea52cdd6d8d14559cd44222e2791af0ce8
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 29 16:28:09 2022 -0500
+
+    Finished GenerateRepReport
+
+commit 676837e2fd37a207490b8f8eb762cb429cb77daf
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 29 15:13:34 2022 -0500
+
+    Forgot to update php/updateLim.php with htdocs/updateLim.php
+
+commit aba7e7834b06abd541c012c072683e887eb9128e
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 29 15:10:59 2022 -0500
+
+    Fixed Bugs.
+
+commit 8a9acaea3c06d246d27becff79d66e596a68a65f
+Merge: 2562793 b878beb
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 29 13:52:18 2022 -0500
+
+    Merge branch 'main' of https://github.com/trevorkerney/CS351-project
+
+commit 25627935263c410add9308c61b8aea55c8556aab
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 29 13:52:12 2022 -0500
+
+    Almost finished rep report.
+
+commit b878bebd101b488c7b431d3edb22a6a1d33c6212
+Author: Step <stevegans42@gmail.com>
+Date:   Fri Apr 29 13:50:37 2022 -0500
+
+    a lot
+
+commit d3df009fe21f69e70b3e2f73286e6240bfbe1965
+Author: Step <stevegans42@gmail.com>
+Date:   Thu Apr 28 23:00:53 2022 -0500
+
+    sync
+
+commit ea5a452f75018964b77836eff2cb36e8a9695c34
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Thu Apr 28 22:41:09 2022 -0500
+
+    Added PHP
+
+commit 9d96f524ab0e2142d5db78f683be11ad71d50097
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Thu Apr 28 19:24:34 2022 -0500
+
+    Fixed GenerateReport to be GenerateRepReport
+
+commit 894dfad131142994ee3c1cab724e2d8e630f06d0
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Thu Apr 28 19:19:43 2022 -0500
+
+    Starting Report Generation Component.
+
+commit 3577d0bcfcf85b0915e3249092ea9cb2f433da11
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Thu Apr 28 19:19:27 2022 -0500
+
+    Merge branch 'main' of https://github.com/trevorkerney/CS351-project
+
+commit 87d712511cc72dfa3c1a30974f410eb3bd380eb3
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Wed Apr 27 04:55:33 2022 -0500
+
+    Merged Conflicts. Added Components Folder.
+
+commit 42985ef354efd53c733be507b29c24dde1e0c3cd
+Merge: 6a194c5 6dadc84
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Wed Apr 27 04:35:58 2022 -0500
+
+    Merge branch 'main' of https://github.com/trevorkerney/CS351-project
+
+commit 6a194c50d9f06f018365c513d0842bc6a371c4b6
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Wed Apr 27 04:27:34 2022 -0500
+
+    Added Exit. Added AddRep.
+
+commit 6dadc843cf85a4d0890e307b8bc65e18778473e3
+Author: Step <stevegans42@gmail.com>
+Date:   Wed Apr 27 01:58:15 2022 -0500
+
+    ^same
+
+commit e7fa0831b01bbf2ac76cc8dbb6c074087b5b7939
+Author: Step <stevegans42@gmail.com>
+Date:   Wed Apr 27 01:57:54 2022 -0500
+
+    Added 'Add Rep', 'Update Lim', and 'Exit" path. Idk what im doing with the 'updateLim.php' file yet but I'll figure it out later
+
+commit 620f363dd0f4092f469662a7d9868b5f5cf0c629
+Author: Step <stevegans42@gmail.com>
+Date:   Wed Apr 20 10:21:04 2022 -0500
+
+    put name in message and added spacing
+
+commit 286cd431442ed37f20eafa0890b100a312b89465
+Author: Step <stevegans42@gmail.com>
+Date:   Tue Apr 19 12:43:59 2022 -0500
+
+    test
+
+commit f84504d93ce1583eb552fa4c4edc863b80aed53c
+Author: Ethan L. Moore <eldm2350@protonmail.com>
+Date:   Sat Apr 16 19:31:13 2022 -0500
+
+    Update README.md
+
+commit dde16b9843c470051577f912cbe70a3ad820e4b0
+Author: Ethan L. Moore <eldm2350@protonmail.com>
+Date:   Sat Apr 16 15:56:51 2022 -0500
+
+    Update README.md
+
+commit c953b112130bb853070fbddb7235ba9e169b019b
+Author: eldm2350 <eldm2350@protonmail.com>
+Date:   Fri Apr 15 22:54:26 2022 -0500
+
+    Added /portal route. Added php for login. ReadMe Updated.
+
+commit e7c90b8722c59abdd4aeef87756a42ad11f8ef06
+Author: trevorkerney <trevorkerney@hotmail.com>
+Date:   Thu Apr 7 00:37:17 2022 -0500
+
+    init
+
+commit d3aba51f0f95053253cab33d312cf7513a006e5f
+Author: Ethan L. Moore <eldm2350@protonmail.com>
+Date:   Wed Apr 6 19:06:05 2022 -0500
+
+    Create README.md
+
+commit b5724fd8a1fe452c419ae0fe0de5666a0905359a
+Author: Trevor Kerney <31868802+trevorkerney@users.noreply.github.com>
+Date:   Wed Apr 6 18:51:45 2022 -0500
+
+    Initial commit
