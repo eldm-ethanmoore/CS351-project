@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
+
+import "../css/Portal.css"
 
 interface limProps {
   changeSubDash: () => void;
@@ -39,7 +41,7 @@ const UpdateLim = ({changeSubDash}:limProps) => {
     <>
         <h1 className="titleText">Update Customer Credit Limit</h1>
         <form onSubmit={handleLimSubmit}>
-          <label>Enter coustomer name: 
+          <label>Enter customer name <br />
             <input 
               type="text" 
               value={coustName}
@@ -47,9 +49,9 @@ const UpdateLim = ({changeSubDash}:limProps) => {
            />
           </label>
 
-          <br></br>
+          <br/><br />
 
-          <label>Enter coustomer Number:  
+          <label>Enter customer number<br />
           <input 
             type="text" 
             value={coustNum}
@@ -57,9 +59,9 @@ const UpdateLim = ({changeSubDash}:limProps) => {
           />
           </label>
 
-          <br></br>
+          <br/><br />
       
-          <label>Enter new limit:
+          <label>Enter new limit<br />
           <input 
             type="text" 
             value={limit}
@@ -67,14 +69,16 @@ const UpdateLim = ({changeSubDash}:limProps) => {
           />
           </label>
       
-          <br></br>
+          <br/><br />
 
           <input type="submit" 
             value = "Update"
+            className='rd-submit'
           />
         </form>
       {subDash && <AfterDisp/>}
       </>
   );
 }
+
 export default UpdateLim;

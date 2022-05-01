@@ -1,0 +1,15 @@
+.rd-submit {
+  background-color: #173fcd;
+  padding: .5rem;
+  color: #f0f0f0;
+  border: none;
+  margin: .5rem 0 .5rem 0;
+}
+
+.rd-submit:hover {
+  opacity: 0.8;
+}
+
+.rd-submit:active {
+  opacity: 0.6;
+}

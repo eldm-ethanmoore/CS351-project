@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
- interface repProps{
+import "../css/Portal.css"
+
+interface repProps {
   username: string;
   password: string;
   changeSubDash: () => void;
- }
+}
 
- const AddRep = ({username, password, changeSubDash}:repProps) => {
+const AddRep = ({username, password, changeSubDash}:repProps) => {
   
-
   const [repnum, setRepNum] = useState("75")
   const [lastname, setLastName] = useState("Moore")
   const [firstname, setFirstName] = useState("Ethan")
@@ -39,99 +40,100 @@ import axios from 'axios';
       <h1 className="titleText">Add Representative</h1>
         <form onSubmit={handleSubmit}>
 
-        <label>Enter your RepNum: 
-          <input 
-            type="text" 
-            value={repnum}
-            onChange={e => setRepNum(e.target.value)}
-          />
-        </label>
+          <label>Enter your RepNum <br />
+            <input 
+              type="text" 
+              placeholder={repnum}
+              onChange={e => setRepNum(e.target.value)}
+            />
+          </label>
 
-        <br></br>
+          <br/><br/>
 
-        <label>Enter your FirstName: 
-          <input 
-            type="text" 
-            value={firstname}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </label>
+          <label>Enter your FirstName <br />
+            <input 
+              type="text" 
+              placeholder={firstname}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </label>
 
-        <br></br>
-        
-        <label>Enter your LastName:
-          <input 
-            type="text" 
-            value={lastname}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </label>
-        
-        <br></br>
+          <br/><br />
+          
+          <label>Enter your LastName <br />
+            <input 
+              type="text" 
+              placeholder={lastname}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </label>
+          
+          <br/><br />
 
-        <label>Enter your Street:
-          <input 
-            type="text" 
-            value={street}
-            onChange={(e) => setStreet(e.target.value)}
-          />
-        </label>
+          <label>Enter your Street <br />
+            <input 
+              type="text" 
+              placeholder={street}
+              onChange={(e) => setStreet(e.target.value)}
+            />
+          </label>
 
-        <br></br>
+          <br/><br />
 
-        <label>Enter your City:
-          <input 
-            type="text" 
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
-        </label>       
+          <label>Enter your City <br />
+            <input 
+              type="text" 
+              placeholder={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+          </label>       
 
-        <br></br>
+          <br/><br />
 
-        <label>Enter your State:
-          <input 
-            type="text" 
-            value={state}
-            onChange={(e) => setState(e.target.value)}
-          />
-        </label>       
+          <label>Enter your State <br />
+            <input 
+              type="text" 
+              placeholder={state}
+              onChange={(e) => setState(e.target.value)}
+            />
+          </label>       
 
-        <br></br>
+          <br/><br />
 
-        <label>Enter your Postal Code:
-          <input 
-            type="text" 
-            value={postalcode}
-            onChange={(e) => setPostalCode(e.target.value)}
-          />
-        </label>       
+          <label>Enter your Postal Code <br />
+            <input 
+              type="text" 
+              placeholder={postalcode}
+              onChange={(e) => setPostalCode(e.target.value)}
+            />
+          </label>       
 
-        <br></br>
+          <br/><br />
 
-        <label>Enter your Commision:
-          <input 
-            type="text" 
-            value={commision}
-            onChange={(e) => Number(setCommision(e.target.value))}
-          />
-        </label>
+          <label>Enter your Commision <br />
+            <input 
+              type="text" 
+              placeholder={commision}
+              onChange={(e) => Number(setCommision(e.target.value))}
+            />
+          </label>
 
-        <br></br>
+          <br/><br />
 
-        <label>Enter your Rate:
-          <input 
-            type="text" 
-            value={rate}
-            onChange={(e) => Number(setRate(e.target.value))}
-          />
-        </label>
+          <label>Enter your Rate <br />
+            <input 
+              type="text" 
+              placeholder={rate}
+              onChange={(e) => Number(setRate(e.target.value))}
+            />
+          </label>
 
-        <br></br>
+          <br/><br />
 
-        <input type="submit" />
+          <input className="rd-submit" type="submit" />
         </form>
     </>
   );
- }
- export default AddRep;
+}
+
+export default AddRep;
